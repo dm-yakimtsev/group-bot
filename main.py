@@ -1,6 +1,6 @@
 from telegram import Update
 from telegram.ext import Application, MessageHandler, filters, CallbackContext
-from config import TOKEN
+from config import TELEGRAM_TOKEN
 
 
 async def start(update: Update, context: CallbackContext) -> None:
@@ -8,7 +8,7 @@ async def start(update: Update, context: CallbackContext) -> None:
 
 
 def main():
-    app = Application.builder().token(TOKEN).build()
+    app = Application.builder().token(TELEGRAM_TOKEN).build()
     app.add_handler(MessageHandler(filters.ALL, start))
     app.run_polling()
 
