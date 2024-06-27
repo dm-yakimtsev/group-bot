@@ -4,7 +4,7 @@ from config import TOKEN
 
 
 async def start(update: Update, context: CallbackContext) -> None:
-    await update.message.reply_text('Привет!')
+    await update.message.reply_text('Привет!, Как дела?')
 
 
 def main():
